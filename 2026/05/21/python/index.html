@@ -1,0 +1,373 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>python学习路线 | Welcome to Yansuan's Blog</title><meta name="author" content="Yansuan"><meta name="copyright" content="Yansuan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="🐍 Python 全套学习流程（PyCharm + YouTube 教程）Python 是目前最受欢迎的编程语言之一，适合数据分析、自动化、Web 开发、人工智能等领域。本教程整理成 黑色框风格 Markdown，适合直接复制使用。  一、为什么学习 Python？ 语法简洁易读   应用领域广：Web、数据、自动化、AI 等   拥有强大的生态系统   丰富的学习资源与社区支持   二、安装准">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python学习路线">
+<meta property="og:url" content="http://example.com/2026/05/21/python/index.html">
+<meta property="og:site_name" content="Welcome to Yansuan&#39;s Blog">
+<meta property="og:description" content="🐍 Python 全套学习流程（PyCharm + YouTube 教程）Python 是目前最受欢迎的编程语言之一，适合数据分析、自动化、Web 开发、人工智能等领域。本教程整理成 黑色框风格 Markdown，适合直接复制使用。  一、为什么学习 Python？ 语法简洁易读   应用领域广：Web、数据、自动化、AI 等   拥有强大的生态系统   丰富的学习资源与社区支持   二、安装准">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASq9ahBIyz9j8fV8YGFiLsgWdmWo0tMAAh0lAALmDIFU3xHZCPwlqVA7BA">
+<meta property="article:published_time" content="2026-05-20T20:56:45.000Z">
+<meta property="article:modified_time" content="2026-08-01T09:21:08.187Z">
+<meta property="article:author" content="Yansuan">
+<meta property="article:tag" content="-编程 -python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASq9ahBIyz9j8fV8YGFiLsgWdmWo0tMAAh0lAALmDIFU3xHZCPwlqVA7BA"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "python学习路线",
+  "url": "http://example.com/2026/05/21/python/",
+  "image": "https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASq9ahBIyz9j8fV8YGFiLsgWdmWo0tMAAh0lAALmDIFU3xHZCPwlqVA7BA",
+  "datePublished": "2026-05-20T20:56:45.000Z",
+  "dateModified": "2026-08-01T09:21:08.187Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yansuan",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/05/21/python/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.6.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'python学习路线',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.2"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABATMRam23QveTxV1yQrFoZQvw3VKdMwsAAt0lAAI8ZGhXJyc-uW4G6Ns9BA);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASq9ahBIyz9j8fV8YGFiLsgWdmWo0tMAAh0lAALmDIFU3xHZCPwlqVA7BA);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Welcome to Yansuan's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">python学习路线</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">python学习路线</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-20T20:56:45.000Z" title="发表于 2026-05-21 04:56:45">2026-05-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-08-01T09:21:08.187Z" title="更新于 2026-08-01 17:21:08">2026-08-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="🐍-Python-全套学习流程（PyCharm-YouTube-教程）"><a href="#🐍-Python-全套学习流程（PyCharm-YouTube-教程）" class="headerlink" title="🐍 Python 全套学习流程（PyCharm + YouTube 教程）"></a>🐍 Python 全套学习流程（PyCharm + YouTube 教程）</h1><p>Python 是目前最受欢迎的编程语言之一，适合数据分析、自动化、Web 开发、人工智能等领域。本教程整理成 <strong>黑色框风格 Markdown</strong>，适合直接复制使用。</p>
+<hr>
+<h2 id="一、为什么学习-Python？"><a href="#一、为什么学习-Python？" class="headerlink" title="一、为什么学习 Python？"></a>一、为什么学习 Python？</h2><ul>
+<li>语法简洁易读  </li>
+<li>应用领域广：Web、数据、自动化、AI 等  </li>
+<li>拥有强大的生态系统  </li>
+<li>丰富的学习资源与社区支持</li>
+</ul>
+<hr>
+<h2 id="二、安装准备"><a href="#二、安装准备" class="headerlink" title="二、安装准备"></a>二、安装准备</h2><h3 id="1️⃣-安装-Python"><a href="#1️⃣-安装-Python" class="headerlink" title="1️⃣ 安装 Python"></a>1️⃣ 安装 Python</h3><p>官网：<a target="_blank" rel="noopener" href="https://www.python.org/downloads">https://www.python.org/downloads</a></p>
+<blockquote>
+<p>安装时勾选 <strong>Add to PATH</strong><br>测试命令：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br><span class="line">pip --version</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2️⃣-安装-PyCharm"><a href="#2️⃣-安装-PyCharm" class="headerlink" title="2️⃣ 安装 PyCharm"></a>2️⃣ 安装 PyCharm</h3><p>官网：<a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/download/">https://www.jetbrains.com/pycharm/download/</a></p>
+<ul>
+<li><strong>Community 版本</strong>：免费</li>
+<li><strong>Professional 版本</strong>：付费可选  </li>
+<li>创建新项目：File → New Project → 选择 Python 解释器</li>
+</ul>
+<hr>
+<h2 id="三、学习路线"><a href="#三、学习路线" class="headerlink" title="三、学习路线"></a>三、学习路线</h2><table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>内容重点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>入门</td>
+<td>语法基础、数据类型、条件、循环</td>
+</tr>
+<tr>
+<td>提升</td>
+<td>函数、模块、面向对象</td>
+</tr>
+<tr>
+<td>进阶</td>
+<td>Web、自动化、爬虫、数据库</td>
+</tr>
+<tr>
+<td>专业</td>
+<td>数据科学、机器学习、AI</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="四、基础语法"><a href="#四、基础语法" class="headerlink" title="四、基础语法"></a>四、基础语法</h2><h3 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello World&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量与数据类型"><a href="#变量与数据类型" class="headerlink" title="变量与数据类型"></a>变量与数据类型</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&quot;Tim&quot;</span></span><br><span class="line">age = <span class="number">14</span></span><br><span class="line">is_student = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> age &gt;= <span class="number">18</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Adult&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Teenager&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<h3 id="列表与字典"><a href="#列表与字典" class="headerlink" title="列表与字典"></a>列表与字典</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fruits = [<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>]</span><br><span class="line">info = &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;Tim&quot;</span>, <span class="string">&quot;age&quot;</span>:<span class="number">14</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数定义"><a href="#函数定义" class="headerlink" title="函数定义"></a>函数定义</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">greet</span>(<span class="params">name</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Hello&quot;</span>, name)</span><br><span class="line"></span><br><span class="line">greet(<span class="string">&quot;Tim&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="五、YouTube-推荐教程"><a href="#五、YouTube-推荐教程" class="headerlink" title="五、YouTube 推荐教程"></a>五、YouTube 推荐教程</h2><h3 id="零基础入门"><a href="#零基础入门" class="headerlink" title="零基础入门"></a>零基础入门</h3><ul>
+<li>Python Basics Playlist（英文）: <a target="_blank" rel="noopener" href="https://youtu.be/_uQrJ0TkZlc">https://youtu.be/_uQrJ0TkZlc</a>  </li>
+<li>Python Tutorial for Beginners（中文）: <a target="_blank" rel="noopener" href="https://youtu.be/hEgO047GxaQ">https://youtu.be/hEgO047GxaQ</a></li>
+</ul>
+<h3 id="PyCharm-使用教程"><a href="#PyCharm-使用教程" class="headerlink" title="PyCharm 使用教程"></a>PyCharm 使用教程</h3><ul>
+<li>PyCharm Beginners Tutorial: <a target="_blank" rel="noopener" href="https://youtu.be/FZDaRzD0-lc">https://youtu.be/FZDaRzD0-lc</a></li>
+</ul>
+<h3 id="进阶教程"><a href="#进阶教程" class="headerlink" title="进阶教程"></a>进阶教程</h3><ul>
+<li>Python Object Oriented Programming: <a target="_blank" rel="noopener" href="https://youtu.be/JeznW_7DlB0">https://youtu.be/JeznW_7DlB0</a>  </li>
+<li>Python Web Scraping: <a target="_blank" rel="noopener" href="https://youtu.be/XQgXKtPSzUI">https://youtu.be/XQgXKtPSzUI</a></li>
+</ul>
+<hr>
+<h2 id="六、PyCharm-使用技巧"><a href="#六、PyCharm-使用技巧" class="headerlink" title="六、PyCharm 使用技巧"></a>六、PyCharm 使用技巧</h2><ul>
+<li>新建文件：右键项目 → New → Python File  </li>
+<li>运行文件：右键文件 → Run  </li>
+<li>设置解释器：File → Settings → Project → Python Interpreter  </li>
+<li>调试：点击断点 → Debug</li>
+</ul>
+<hr>
+<h2 id="七、实战项目建议"><a href="#七、实战项目建议" class="headerlink" title="七、实战项目建议"></a>七、实战项目建议</h2><h3 id="1️⃣-计算器程序"><a href="#1️⃣-计算器程序" class="headerlink" title="1️⃣ 计算器程序"></a>1️⃣ 计算器程序</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">num1 = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;Enter num1: &quot;</span>))</span><br><span class="line">num2 = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;Enter num2: &quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Sum:&quot;</span>, num1 + num2)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2️⃣-网络爬虫"><a href="#2️⃣-网络爬虫" class="headerlink" title="2️⃣ 网络爬虫"></a>2️⃣ 网络爬虫</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line">r = requests.get(<span class="string">&quot;https://example.com&quot;</span>)</span><br><span class="line">soup = BeautifulSoup(r.text, <span class="string">&quot;html.parser&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(soup.title.text)</span><br></pre></td></tr></table></figure>
+
+<p>安装依赖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install requests</span><br><span class="line">pip install beautifulsoup4</span><br></pre></td></tr></table></figure>
+
+<h3 id="3️⃣-自动化办公"><a href="#3️⃣-自动化办公" class="headerlink" title="3️⃣ 自动化办公"></a>3️⃣ 自动化办公</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_excel(<span class="string">&quot;data.xlsx&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(df.head())</span><br></pre></td></tr></table></figure>
+<p>安装依赖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pandas</span><br><span class="line">pip install openpyxl</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="八、常用-Python-库"><a href="#八、常用-Python-库" class="headerlink" title="八、常用 Python 库"></a>八、常用 Python 库</h2><table>
+<thead>
+<tr>
+<th>库</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>requests</td>
+<td>网络请求</td>
+</tr>
+<tr>
+<td>BeautifulSoup</td>
+<td>网页解析</td>
+</tr>
+<tr>
+<td>pandas</td>
+<td>数据分析</td>
+</tr>
+<tr>
+<td>numpy</td>
+<td>数学计算</td>
+</tr>
+<tr>
+<td>matplotlib</td>
+<td>图表绘制</td>
+</tr>
+<tr>
+<td>flask &#x2F; django</td>
+<td>Web 框架</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="九、进阶方向"><a href="#九、进阶方向" class="headerlink" title="九、进阶方向"></a>九、进阶方向</h2><ul>
+<li>Web 开发：Flask &#x2F; Django  </li>
+<li>数据科学：pandas &#x2F; numpy &#x2F; matplotlib  </li>
+<li>机器学习：scikit-learn &#x2F; TensorFlow &#x2F; PyTorch</li>
+</ul>
+<hr>
+<h2 id="十、学习计划（示例）"><a href="#十、学习计划（示例）" class="headerlink" title="十、学习计划（示例）"></a>十、学习计划（示例）</h2><table>
+<thead>
+<tr>
+<th>周数</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第 1 周</td>
+<td>Python 基础语法</td>
+</tr>
+<tr>
+<td>第 2 周</td>
+<td>函数、循环、数据结构</td>
+</tr>
+<tr>
+<td>第 3 周</td>
+<td>PyCharm 熟练使用 + 项目实践</td>
+</tr>
+<tr>
+<td>第 4 周</td>
+<td>网络爬虫 + 自动化办公</td>
+</tr>
+<tr>
+<td>第 5 周及以后</td>
+<td>方向选择：Web &#x2F; 数据科学 &#x2F; 机器学习</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="十一、总结"><a href="#十一、总结" class="headerlink" title="十一、总结"></a>十一、总结</h2><p>学习 Python 的关键：</p>
+<ul>
+<li>多写代码、多练项目  </li>
+<li>善用 YouTube 教程与官方文档  </li>
+<li>坚持学习，逐步进入进阶领域</li>
+</ul>
+<blockquote>
+<p>Python 学习是长期积累过程，坚持下去，你会成为真正的 Python 开发者 🚀</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Yansuan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/05/21/python/">http://example.com/2026/05/21/python/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Welcome to Yansuan's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B-python/">-编程 -python</a></div><div class="post-share"><div class="social-share" data-image="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASq9ahBIyz9j8fV8YGFiLsgWdmWo0tMAAh0lAALmDIFU3xHZCPwlqVA7BA" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/05/21/kali/" title="kali入门黑客"><img class="cover" src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASq-ahBI7Fp6Hkx-MCktOAwPPO25JQQAAh4lAALmDIFUTGUAAUQ3LgnSOwQ" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">kali入门黑客</div></div><div class="info-2"><div class="info-item-1">🐉 Kali Linux 入门学习教程（网络安全基础版） ⚠️ 本教程仅用于 合法学习、实验环境练习、CTF、安全研究。不要攻击他人设备、网站或账号。网络安全的核心是：保护系统，而不是破坏系统。   🌟 一、什么是 Kali Linux？Kali Linux 是一个专门用于：  网络安全学习 渗透测试 CTF 比赛 安全研究 数字取证  的 Linux 系统。 它内置了大量安全工具，因此被很多安全研究人员使用。  🧰 二、安装 Kali Linux📥 官方下载官网： 1https://www.kali.org  下载页面： 1https://www.kali.org/get-kali/   💻 推荐安装方式   方式 推荐指数 说明    VMware 虚拟机 ⭐⭐⭐⭐⭐ 最适合新手   VirtualBox ⭐⭐⭐⭐ 免费简单   U盘安装 ⭐⭐⭐ 真机体验   WSL ⭐⭐ Windows 子系统    🖥 三、VMware 安装 Kali📦 下载 VMware官网： 1https://www.vmware.com   📥 导入 Kali 镜像步骤： 1234...</div></div></div></a><a class="pagination-related" href="/2026/05/18/youtuber/" title="如何成为一个优秀的 YouTuber（本地创作者路线 + 收益方法）"><img class="cover" src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASq8ahBIqDvcK4E7GDxP8R5ZhMu7socAAhwlAALmDIFUfWcAAUJlozziOwQ" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">如何成为一个优秀的 YouTuber（本地创作者路线 + 收益方法）</div></div><div class="info-2"><div class="info-item-1">🎬 如何成为一个优秀的 YouTuber（本地创作者路线 + 收益方法）想成为一个有影响力的 YouTuber，不只是拍视频，还要懂得定位、内容制作、推广以及变现。以下是一份 精美全面、适合初学者与进阶者 的 Markdown 教程，你可以直接复制粘贴使用。  🌟 一、为什么要成为 YouTuber？ 展示你的兴趣、技能和观点   建立个人品牌和粉丝群体   获得广告与商业合作收入   可以变成职业和事业方向   🎯 二、确定你的频道定位先想清楚你想做什么类型的频道：    类型 说明    🎮 游戏解说 游戏攻略、开箱、实况   📚 技能教学 教程、编程、语言   🎥 Vlog 生活分享、旅行、校园   🍔 美食 做菜、试吃、推荐   💡 创意内容 科普、搞笑、科技产品    定位越清晰，越容易吸引稳定粉丝！   📌 三、频道规划与策略1. 设定目标123目标 1: 每周上传 2–3 个视频目标 2: 在 3 个月内达到 1000 订阅目标 3: 开启收益功能   2. 频道名称与封面（品牌设计） 频道名字要简洁好记 设计一个专业 Logo 准备频道封面与风格...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABATMZam3AT1hGYgfCRLC2XPQ7AmTi-p4AAhEmAAI8ZGhX4PkbPnCPE0k9BA" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yansuan</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">29</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/yansuanx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%90%8D-Python-%E5%85%A8%E5%A5%97%E5%AD%A6%E4%B9%A0%E6%B5%81%E7%A8%8B%EF%BC%88PyCharm-YouTube-%E6%95%99%E7%A8%8B%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">🐍 Python 全套学习流程（PyCharm + YouTube 教程）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E5%AD%A6%E4%B9%A0-Python%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">一、为什么学习 Python？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85%E5%87%86%E5%A4%87"><span class="toc-number">1.2.</span> <span class="toc-text">二、安装准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%B8%8F%E2%83%A3-%E5%AE%89%E8%A3%85-Python"><span class="toc-number">1.2.1.</span> <span class="toc-text">1️⃣ 安装 Python</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%B8%8F%E2%83%A3-%E5%AE%89%E8%A3%85-PyCharm"><span class="toc-number">1.2.2.</span> <span class="toc-text">2️⃣ 安装 PyCharm</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF"><span class="toc-number">1.3.</span> <span class="toc-text">三、学习路线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">四、基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hello-World"><span class="toc-number">1.4.1.</span> <span class="toc-text">Hello World</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.4.2.</span> <span class="toc-text">变量与数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.3.</span> <span class="toc-text">条件语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.4.</span> <span class="toc-text">循环语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%97%E8%A1%A8%E4%B8%8E%E5%AD%97%E5%85%B8"><span class="toc-number">1.4.5.</span> <span class="toc-text">列表与字典</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89"><span class="toc-number">1.4.6.</span> <span class="toc-text">函数定义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81YouTube-%E6%8E%A8%E8%8D%90%E6%95%99%E7%A8%8B"><span class="toc-number">1.5.</span> <span class="toc-text">五、YouTube 推荐教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8"><span class="toc-number">1.5.1.</span> <span class="toc-text">零基础入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PyCharm-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text">PyCharm 使用教程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E6%95%99%E7%A8%8B"><span class="toc-number">1.5.3.</span> <span class="toc-text">进阶教程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81PyCharm-%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="toc-number">1.6.</span> <span class="toc-text">六、PyCharm 使用技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.7.</span> <span class="toc-text">七、实战项目建议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%EF%B8%8F%E2%83%A3-%E8%AE%A1%E7%AE%97%E5%99%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.7.1.</span> <span class="toc-text">1️⃣ 计算器程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%EF%B8%8F%E2%83%A3-%E7%BD%91%E7%BB%9C%E7%88%AC%E8%99%AB"><span class="toc-number">1.7.2.</span> <span class="toc-text">2️⃣ 网络爬虫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%EF%B8%8F%E2%83%A3-%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%AC"><span class="toc-number">1.7.3.</span> <span class="toc-text">3️⃣ 自动化办公</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%B8%B8%E7%94%A8-Python-%E5%BA%93"><span class="toc-number">1.8.</span> <span class="toc-text">八、常用 Python 库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E8%BF%9B%E9%98%B6%E6%96%B9%E5%90%91"><span class="toc-number">1.9.</span> <span class="toc-text">九、进阶方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92%EF%BC%88%E7%A4%BA%E4%BE%8B%EF%BC%89"><span class="toc-number">1.10.</span> <span class="toc-text">十、学习计划（示例）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-number">1.11.</span> <span class="toc-text">十一、总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/03/ai%E5%A4%A7%E6%AF%94%E8%B5%9B/" title="全球AI大模型终极横评（2026最新版）"><img src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASvBah9Et1_Q5O4LhCi5zVdVNgH9NWEAAhYfAAIMUfhUa9LxtshMBeE7BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="全球AI大模型终极横评（2026最新版）"/></a><div class="content"><a class="title" href="/2026/06/03/ai%E5%A4%A7%E6%AF%94%E8%B5%9B/" title="全球AI大模型终极横评（2026最新版）">全球AI大模型终极横评（2026最新版）</a><time datetime="2026-06-02T21:02:01.000Z" title="发表于 2026-06-03 05:02:01">2026-06-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/03/google/" title="2026 Google 账号注册详细教程"><img src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASu9ah9BCU0cCwoMfLvBRPbSFR5cVgkAAhEfAAIMUfhUFrGV43yVMBE7BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026 Google 账号注册详细教程"/></a><div class="content"><a class="title" href="/2026/06/03/google/" title="2026 Google 账号注册详细教程">2026 Google 账号注册详细教程</a><time datetime="2026-06-02T20:37:10.000Z" title="发表于 2026-06-03 04:37:10">2026-06-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/03/tg/" title="Telegram 注册完整教程（2026最新版）"><img src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASu7ah9As89RfVIrFe_I3dRnNC7NYKgAAg8fAAIMUfhUPDvsKqffekc7BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Telegram 注册完整教程（2026最新版）"/></a><div class="content"><a class="title" href="/2026/06/03/tg/" title="Telegram 注册完整教程（2026最新版）">Telegram 注册完整教程（2026最新版）</a><time datetime="2026-06-02T20:36:10.000Z" title="发表于 2026-06-03 04:36:10">2026-06-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/03/git/" title="GitHub 全套详细使用教程"><img src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASvAah9CFNqbeVHKW5zJWCe5P8cmDCEAAhQfAAIMUfhUBuwHNje4RmQ7BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitHub 全套详细使用教程"/></a><div class="content"><a class="title" href="/2026/06/03/git/" title="GitHub 全套详细使用教程">GitHub 全套详细使用教程</a><time datetime="2026-06-02T20:34:38.000Z" title="发表于 2026-06-03 04:34:38">2026-06-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/03/phone/" title="海外手机卡与 eSIM 完整指南（2026版）"><img src="https://img.131213.xyz/tfile/BQACAgUAAx0Eflp52gABASu_ah9BxkVdvkn2qBuXPQZCnboB7oUAAhMfAAIMUfhUuVXxKoSFnKk7BA" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="海外手机卡与 eSIM 完整指南（2026版）"/></a><div class="content"><a class="title" href="/2026/06/03/phone/" title="海外手机卡与 eSIM 完整指南（2026版）">海外手机卡与 eSIM 完整指南（2026版）</a><time datetime="2026-06-02T20:33:43.000Z" title="发表于 2026-06-03 04:33:43">2026-06-03</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yansuan</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.2</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.6.1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.6.1"></script><script src="/js/main.js?v=5.6.1"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
