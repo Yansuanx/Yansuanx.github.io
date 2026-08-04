@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>网络加速与常用代理客户端（Clash Verge / v2rayN）使用教程</title>
+      <link href="/2026/08/04/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+      <url>/2026/08/04/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</url>
+      
+        <content type="html"><![CDATA[<p>为了方便进行学术研究、技术查阅以及日常跨境网络访问，本文将详细介绍两款主流代理客户端 <strong>Clash Verge</strong> 和 <strong>v2rayN</strong> 的配置与使用方法。</p><blockquote><p>⚠️ <strong>免责声明</strong>：本文仅供网络技术交流与学术资料检索使用，请严格遵守当地法律法规。</p></blockquote><hr><h2 id="一、常用客户端下载"><a href="#一、常用客户端下载" class="headerlink" title="一、常用客户端下载"></a>一、常用客户端下载</h2><p>你可以通过下方链接获取常用客户端的安装包：</p><p><a href="https://app.bigjackson.top/"><img src="https://app.bigjackson.top/" alt="客户端下载"></a></p><blockquote><p>🔗 <strong>软件下载直达地址</strong>：<a href="https://app.bigjackson.top/">https://app.bigjackson.top/</a></p></blockquote><hr><h2 id="二、Clash-Verge-配置教程（推荐）"><a href="#二、Clash-Verge-配置教程（推荐）" class="headerlink" title="二、Clash Verge 配置教程（推荐）"></a>二、Clash Verge 配置教程（推荐）</h2><p><strong>Clash Verge</strong> 是目前广泛使用的开源 Clash 客户端，界面美观且支持多平台。</p><h3 id="1-安装与启动"><a href="#1-安装与启动" class="headerlink" title="1. 安装与启动"></a>1. 安装与启动</h3><ol><li>访问上面的下载链接下载对应的安装包（Windows 请选择 <code>.exe</code> 安装包）。</li><li>安装完成后打开 Clash Verge 客户端。</li></ol><h3 id="2-导入订阅链接"><a href="#2-导入订阅链接" class="headerlink" title="2. 导入订阅链接"></a>2. 导入订阅链接</h3><ol><li>打开服务商（机场）后台，复制你的 <strong>Clash 订阅链接</strong>。</li><li>进入 Clash Verge 界面，点击左侧菜单栏的 <strong>「订阅 (Profiles)」</strong>。</li><li>在顶部的输入框中粘贴刚刚复制的订阅 URL，点击右侧的 <strong>「导入 (Import)」</strong>。</li><li>导入成功后，选中该订阅使其处于激活状态（边框高亮）。</li></ol><h3 id="3-开启代理与模式选择"><a href="#3-开启代理与模式选择" class="headerlink" title="3. 开启代理与模式选择"></a>3. 开启代理与模式选择</h3><ol><li>点击左侧 <strong>「代理 (Proxies)」</strong> 菜单：<ul><li><strong>Rule (规则模式)</strong>：推荐，国内流量直连，国外流量走代理。</li><li><strong>Global (全局模式)</strong>：所有网络流量均经过代理节点。</li><li><strong>Direct (直连模式)</strong>：不使用代理。</li></ul></li><li>点击左侧 <strong>「设置 (Settings)」</strong>，开启 <strong>「系统代理 (System Proxy)」</strong> 开关即可开始上网。</li></ol><hr><h2 id="三、v2rayN-配置教程（Windows）"><a href="#三、v2rayN-配置教程（Windows）" class="headerlink" title="三、v2rayN 配置教程（Windows）"></a>三、v2rayN 配置教程（Windows）</h2><p><strong>v2rayN</strong> 是一款经典的 Windows 平台代理客户端，兼容性强、资源占用低。</p><h3 id="1-安装与解压"><a href="#1-安装与解压" class="headerlink" title="1. 安装与解压"></a>1. 安装与解压</h3><ol><li>从下载站点获取 <code>v2rayN-With-Core.zip</code> 压缩包。</li><li>解压到任意不含中文路径的文件夹（如 <code>D:\v2rayN</code>）。</li><li>双击运行 <code>v2rayN.exe</code>（如果报错，请先安装 .NET Framework 运行库）。</li></ol><h3 id="2-添加订阅与更新"><a href="#2-添加订阅与更新" class="headerlink" title="2. 添加订阅与更新"></a>2. 添加订阅与更新</h3><ol><li>复制服务商提供的 <strong>V2Ray &#x2F; Vmess &#x2F; Shadowsocks 订阅链接</strong>。</li><li>打开 v2rayN，点击顶部菜单的 <strong>「订阅分组」 -&gt; 「订阅分组设置」</strong>。</li><li>点击 <strong>「添加」</strong>，输入备注名称，并将链接粘贴到 <strong>「地址（url）」</strong> 栏，点击确定。</li><li>返回主界面，点击顶部菜单的 <strong>「订阅分组」 -&gt; 「更新订阅（不通过代理）」</strong>，下方列表中将加载出所有节点。</li></ol><h3 id="3-启用系统代理"><a href="#3-启用系统代理" class="headerlink" title="3. 启用系统代理"></a>3. 启用系统代理</h3><ol><li>在主界面节点列表中，选择一个节点按回车（或右键设为活动节点）。</li><li>查看屏幕右下角任务栏的 <strong>v2rayN 红色&#x2F;蓝色小图标</strong>。</li><li>鼠标右键点击图标：<ul><li><strong>清除系统代理</strong> -&gt; <strong>自动配置系统代理</strong>（图标变红，表示已开启）。</li><li><strong>路由模式</strong> 选择 <strong>「绕过大陆 (Bypass mainland)」</strong>。</li></ul></li></ol><hr><h2 id="四、常见问题排查-Q-A"><a href="#四、常见问题排查-Q-A" class="headerlink" title="四、常见问题排查 (Q&amp;A)"></a>四、常见问题排查 (Q&amp;A)</h2><h3 id="Q1：配置完成后依然无法访问外网？"><a href="#Q1：配置完成后依然无法访问外网？" class="headerlink" title="Q1：配置完成后依然无法访问外网？"></a>Q1：配置完成后依然无法访问外网？</h3><ul><li>检查系统时间是否准确（时间不同步会导致 TLS 握手失败）。</li><li>检查浏览器是否有第三方插件冲突，或尝试重启客户端的“系统代理”开关。</li></ul><h3 id="Q2：网页打得开但部分软件（如-Discord、Telegram）连不上？"><a href="#Q2：网页打得开但部分软件（如-Discord、Telegram）连不上？" class="headerlink" title="Q2：网页打得开但部分软件（如 Discord、Telegram）连不上？"></a>Q2：网页打得开但部分软件（如 Discord、Telegram）连不上？</h3><ul><li>在 Clash Verge 中开启 <strong>「TUN 模式 (TUN Mode)」</strong>，开启后需按提示安装虚拟网卡，即可接管全局应用流量。</li></ul><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件指南 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> 工具 </tag>
+            
+            <tag> Clash </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>全球AI大模型终极横评（2026最新版）</title>
       <link href="/2026/06/03/ai%E5%A4%A7%E6%AF%94%E8%B5%9B/"/>
       <url>/2026/06/03/ai%E5%A4%A7%E6%AF%94%E8%B5%9B/</url>
